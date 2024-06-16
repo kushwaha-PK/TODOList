@@ -1,0 +1,39 @@
+<div class="container-fluid">
+    <div class="row bg-primary justify-content-center align-items-center" style="height: 80px;">
+      <div class="col-12 col-md-2 text-light h2">
+        TODO List
+      </div>
+    </div>
+  
+    <div class="row mt-3 justify-content-center">
+      <div class="col-md-6">
+        <div class="card bg-light text-dark">
+          <div class="card-header bg-primary text-light">
+            Task Details
+          </div>
+          <div class="card-body">
+            <!-- <label for="taskId">Task ID</label>
+            <input type="text" class="form-control mb-2" id="taskId" placeholder="Enter Task ID" [(ngModel)]="Task.id" disabled>
+   -->
+            <label for="taskDescription">Task Description</label>
+            <input type="text" class="form-control mb-2" id="taskDescription" placeholder="Enter Task Description" [(ngModel)]="Task.Desc">
+  
+            <label for="taskPriority">Task Priority</label>
+            <select class="form-control mb-2" id="taskPriority" [(ngModel)]="Task.Priority" name="taskPriority">
+              <option *ngFor="let p of Priority " [value]="p">{{ p }}</option>
+            </select>
+  
+            <label for="taskStatus">Task Status</label>
+            <select class="form-control mb-3" id="taskStatus" [(ngModel)]="Task.Status" name="taskStatus">
+              <option *ngFor="let s of Status" [value]="s">{{ s }}</option>
+            </select>
+  
+            <button type="button" class="btn btn-primary" (click)="Add()">
+              ADD TASK
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
